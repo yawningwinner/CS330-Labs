@@ -1,0 +1,139 @@
+918   execve("./cprime", ["./cprime", "500000", "8", "3"], 0x7fff5154d8c0 /* 18 vars */) = 0
+918   brk(NULL)                         = 0x555c51c3d000
+918   arch_prctl(0x3001 /* ARCH_??? */, 0x7fffad579240) = -1 EINVAL (Invalid argument)
+918   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b8a0a4c9000
+918   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+918   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+918   newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+918   mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7b8a0a4c1000
+918   close(3)                          = 0
+918   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+918   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+918   newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+918   mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b8a0a3da000
+918   mmap(0x7b8a0a3e8000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7b8a0a3e8000
+918   mmap(0x7b8a0a464000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7b8a0a464000
+918   mmap(0x7b8a0a4bf000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7b8a0a4bf000
+918   close(3)                          = 0
+918   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+918   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+918   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+918   pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+918   pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+918   newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+918   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+918   mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b8a0a1b1000
+918   mprotect(0x7b8a0a1d9000, 2023424, PROT_NONE) = 0
+918   mmap(0x7b8a0a1d9000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7b8a0a1d9000
+918   mmap(0x7b8a0a36e000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7b8a0a36e000
+918   mmap(0x7b8a0a3c7000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7b8a0a3c7000
+918   mmap(0x7b8a0a3cd000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7b8a0a3cd000
+918   close(3)                          = 0
+918   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b8a0a1ae000
+918   arch_prctl(ARCH_SET_FS, 0x7b8a0a1ae740) = 0
+918   set_tid_address(0x7b8a0a1aea10)   = 918
+918   set_robust_list(0x7b8a0a1aea20, 24) = 0
+918   rseq(0x7b8a0a1af0e0, 0x20, 0, 0x53053053) = 0
+918   mprotect(0x7b8a0a3c7000, 16384, PROT_READ) = 0
+918   mprotect(0x7b8a0a4bf000, 4096, PROT_READ) = 0
+918   mprotect(0x555c5001f000, 4096, PROT_READ) = 0
+918   mprotect(0x7b8a0a503000, 8192, PROT_READ) = 0
+918   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+918   munmap(0x7b8a0a4c1000, 29392)     = 0
+918   pipe([3, 4])                      = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7b8a0a1aea10) = 919
+918   pipe([5, 6])                      = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7b8a0a1aea10) = 920
+918   pipe([7, 8])                      = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7b8a0a1aea10) = 921
+918   pipe([9, 10])                     = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+919   set_robust_list(0x7b8a0a1aea20, 24) = 0
+918   <... clone resumed>, child_tidptr=0x7b8a0a1aea10) = 922
+918   pipe([11, 12])                    = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+920   set_robust_list(0x7b8a0a1aea20, 24 <unfinished ...>
+918   <... clone resumed>, child_tidptr=0x7b8a0a1aea10) = 923
+918   pipe( <unfinished ...>
+921   set_robust_list(0x7b8a0a1aea20, 24 <unfinished ...>
+918   <... pipe resumed>[13, 14])       = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+923   set_robust_list(0x7b8a0a1aea20, 24) = 0
+920   <... set_robust_list resumed>)    = 0
+924   set_robust_list(0x7b8a0a1aea20, 24 <unfinished ...>
+922   set_robust_list(0x7b8a0a1aea20, 24 <unfinished ...>
+924   <... set_robust_list resumed>)    = 0
+922   <... set_robust_list resumed>)    = 0
+921   <... set_robust_list resumed>)    = 0
+918   <... clone resumed>, child_tidptr=0x7b8a0a1aea10) = 924
+918   pipe([15, 16])                    = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+925   set_robust_list(0x7b8a0a1aea20, 24) = 0
+918   <... clone resumed>, child_tidptr=0x7b8a0a1aea10) = 925
+918   pipe([17, 18])                    = 0
+918   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7b8a0a1aea10) = 926
+918   wait4(-1,  <unfinished ...>
+926   set_robust_list(0x7b8a0a1aea20, 24) = 0
+919   write(4, "\203\30\0\0", 4)        = 4
+919   exit_group(1)                     = ?
+919   +++ exited with 1 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 919
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=919, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+918   read(3, "\203\30\0\0", 4)         = 4
+918   wait4(-1,  <unfinished ...>
+920   write(6, "S\25\0\0", 4)           = 4
+920   exit_group(2)                     = ?
+920   +++ exited with 2 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 920
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=920, si_uid=1000, si_status=2, si_utime=0, si_stime=0} ---
+918   read(5, "S\25\0\0", 4)            = 4
+918   wait4(-1,  <unfinished ...>
+921   write(8, "n\24\0\0", 4)           = 4
+921   exit_group(3)                     = ?
+921   +++ exited with 3 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 3}], 0, NULL) = 921
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=921, si_uid=1000, si_status=3, si_utime=0, si_stime=0} ---
+918   read(7, "n\24\0\0", 4)            = 4
+918   wait4(-1,  <unfinished ...>
+923   write(12, "T\23\0\0", 4)          = 4
+923   exit_group(5)                     = ?
+923   +++ exited with 5 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 5}], 0, NULL) = 923
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=923, si_uid=1000, si_status=5, si_utime=0, si_stime=0} ---
+918   read(11, "T\23\0\0", 4)           = 4
+918   wait4(-1,  <unfinished ...>
+924   write(14, "0\23\0\0", 4)          = 4
+924   exit_group(6)                     = ?
+922   write(10, "\330\23\0\0", 4 <unfinished ...>
+924   +++ exited with 6 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 6}], 0, NULL) = 924
+922   <... write resumed>)              = 4
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=924, si_uid=1000, si_status=6, si_utime=0, si_stime=0} ---
+918   read(13, "0\23\0\0", 4)           = 4
+918   wait4(-1,  <unfinished ...>
+922   exit_group(4)                     = ?
+922   +++ exited with 4 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 4}], 0, NULL) = 922
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=922, si_uid=1000, si_status=4, si_utime=0, si_stime=0} ---
+918   read(9, "\330\23\0\0", 4)         = 4
+918   wait4(-1,  <unfinished ...>
+925   write(16, "\364\22\0\0", 4)       = 4
+925   exit_group(7)                     = ?
+925   +++ exited with 7 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 7}], 0, NULL) = 925
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=925, si_uid=1000, si_status=7, si_utime=0, si_stime=0} ---
+918   read(15, "\364\22\0\0", 4)        = 4
+918   wait4(-1,  <unfinished ...>
+926   write(18, "\256\22\0\0", 4)       = 4
+926   exit_group(8)                     = ?
+926   +++ exited with 8 +++
+918   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 8}], 0, NULL) = 926
+918   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=926, si_uid=1000, si_status=8, si_utime=1, si_stime=0} ---
+918   read(17, "\256\22\0\0", 4)        = 4
+918   newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=178, ...}, AT_EMPTY_PATH) = 0
+918   getrandom("\xe8\xb0\xa8\x22\x6a\xbe\xd5\xcc", 8, GRND_NONBLOCK) = 8
+918   brk(NULL)                         = 0x555c51c3d000
+918   brk(0x555c51c5e000)               = 0x555c51c5e000
+918   write(1, "Testcase: 3 numP: 8 Expected: 41"..., 88) = 88
+918   exit_group(0)                     = ?
+918   +++ exited with 0 +++

@@ -1,0 +1,95 @@
+901   execve("./cprime", ["./cprime", "500000", "4", "2"], 0x7ffc3a346bb0 /* 18 vars */) = 0
+901   brk(NULL)                         = 0x563d4e2c2000
+901   arch_prctl(0x3001 /* ARCH_??? */, 0x7fff37e5dfa0) = -1 EINVAL (Invalid argument)
+901   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7717eeef3000
+901   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+901   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+901   newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+901   mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7717eeeeb000
+901   close(3)                          = 0
+901   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+901   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+901   newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+901   mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7717eee04000
+901   mmap(0x7717eee12000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7717eee12000
+901   mmap(0x7717eee8e000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7717eee8e000
+901   mmap(0x7717eeee9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7717eeee9000
+901   close(3)                          = 0
+901   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+901   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+901   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+901   pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+901   pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+901   newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+901   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+901   mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7717eebdb000
+901   mprotect(0x7717eec03000, 2023424, PROT_NONE) = 0
+901   mmap(0x7717eec03000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7717eec03000
+901   mmap(0x7717eed98000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7717eed98000
+901   mmap(0x7717eedf1000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7717eedf1000
+901   mmap(0x7717eedf7000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7717eedf7000
+901   close(3)                          = 0
+901   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7717eebd8000
+901   arch_prctl(ARCH_SET_FS, 0x7717eebd8740) = 0
+901   set_tid_address(0x7717eebd8a10)   = 901
+901   set_robust_list(0x7717eebd8a20, 24) = 0
+901   rseq(0x7717eebd90e0, 0x20, 0, 0x53053053) = 0
+901   mprotect(0x7717eedf1000, 16384, PROT_READ) = 0
+901   mprotect(0x7717eeee9000, 4096, PROT_READ) = 0
+901   mprotect(0x563d4d374000, 4096, PROT_READ) = 0
+901   mprotect(0x7717eef2d000, 8192, PROT_READ) = 0
+901   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+901   munmap(0x7717eeeeb000, 29392)     = 0
+901   pipe([3, 4])                      = 0
+901   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7717eebd8a10) = 902
+901   pipe([5, 6])                      = 0
+901   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7717eebd8a10) = 903
+901   pipe([7, 8])                      = 0
+901   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+903   set_robust_list(0x7717eebd8a20, 24 <unfinished ...>
+901   <... clone resumed>, child_tidptr=0x7717eebd8a10) = 904
+903   <... set_robust_list resumed>)    = 0
+902   set_robust_list(0x7717eebd8a20, 24 <unfinished ...>
+901   pipe( <unfinished ...>
+902   <... set_robust_list resumed>)    = 0
+901   <... pipe resumed>[9, 10])        = 0
+901   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+904   set_robust_list(0x7717eebd8a20, 24) = 0
+901   <... clone resumed>, child_tidptr=0x7717eebd8a10) = 905
+905   set_robust_list(0x7717eebd8a20, 24 <unfinished ...>
+901   wait4(-1,  <unfinished ...>
+905   <... set_robust_list resumed>)    = 0
+902   write(4, "\326-\0\0", 4)          = 4
+902   exit_group(1)                     = ?
+902   +++ exited with 1 +++
+901   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 902
+901   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=902, si_uid=1000, si_status=1, si_utime=1, si_stime=0} ---
+901   read(3, "\326-\0\0", 4)           = 4
+901   wait4(-1,  <unfinished ...>
+903   write(6, "F(\0\0", 4)             = 4
+903   exit_group(2)                     = ?
+903   +++ exited with 2 +++
+901   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 903
+901   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=903, si_uid=1000, si_status=2, si_utime=1, si_stime=0} ---
+901   read(5, "F(\0\0", 4)              = 4
+901   wait4(-1,  <unfinished ...>
+904   write(8, "\204&\0\0", 4)          = 4
+904   exit_group(3)                     = ?
+904   +++ exited with 3 +++
+901   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 3}], 0, NULL) = 904
+901   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=904, si_uid=1000, si_status=3, si_utime=1, si_stime=0} ---
+901   read(7, "\204&\0\0", 4)           = 4
+901   wait4(-1,  <unfinished ...>
+905   write(10, "\242%\0\0", 4)         = 4
+905   exit_group(4)                     = ?
+905   +++ exited with 4 +++
+901   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 4}], 0, NULL) = 905
+901   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=905, si_uid=1000, si_status=4, si_utime=2, si_stime=0} ---
+901   read(9, "\242%\0\0", 4)           = 4
+901   newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=89, ...}, AT_EMPTY_PATH) = 0
+901   getrandom("\xe7\xb7\xf2\x9a\x95\xeb\x24\x02", 8, GRND_NONBLOCK) = 8
+901   brk(NULL)                         = 0x563d4e2c2000
+901   brk(0x563d4e2e3000)               = 0x563d4e2e3000
+901   write(1, "Testcase: 2 numP: 4 Expected: 41"..., 89) = 89
+901   exit_group(0)                     = ?
+901   +++ exited with 0 +++

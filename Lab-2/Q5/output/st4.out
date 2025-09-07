@@ -1,0 +1,524 @@
+845   execve("./encdrv", ["./encdrv", "testcases/testcase.4", "output/output.4"], 0x7ffdbc2db258 /* 18 vars */) = 0
+845   brk(NULL)                         = 0x648789073000
+845   arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc519f3230) = -1 EINVAL (Invalid argument)
+845   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74b572384000
+845   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+845   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+845   newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+845   mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x74b57237c000
+845   close(3)                          = 0
+845   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+845   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+845   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+845   pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+845   pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+845   newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+845   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+845   mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74b572153000
+845   mprotect(0x74b57217b000, 2023424, PROT_NONE) = 0
+845   mmap(0x74b57217b000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x74b57217b000
+845   mmap(0x74b572310000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x74b572310000
+845   mmap(0x74b572369000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x74b572369000
+845   mmap(0x74b57236f000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x74b57236f000
+845   close(3)                          = 0
+845   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74b572150000
+845   arch_prctl(ARCH_SET_FS, 0x74b572150740) = 0
+845   set_tid_address(0x74b572150a10)   = 845
+845   set_robust_list(0x74b572150a20, 24) = 0
+845   rseq(0x74b5721510e0, 0x20, 0, 0x53053053) = 0
+845   mprotect(0x74b572369000, 16384, PROT_READ) = 0
+845   mprotect(0x648789009000, 4096, PROT_READ) = 0
+845   mprotect(0x74b5723be000, 8192, PROT_READ) = 0
+845   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+845   munmap(0x74b57237c000, 29392)     = 0
+845   pipe2([3, 4], 0)                  = 0
+845   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x74b572150a10) = 846
+845   openat(AT_FDCWD, "testcases/testcase.4", O_RDONLY) = 5
+845   openat(AT_FDCWD, "output/output.4", O_WRONLY|O_CREAT, 0666) = 6
+846   set_robust_list(0x74b572150a20, 24 <unfinished ...>
+845   openat(AT_FDCWD, "testcases/testcase.4", O_RDONLY <unfinished ...>
+846   <... set_robust_list resumed>)    = 0
+845   <... openat resumed>)             = 7
+845   lseek(7, 0, SEEK_END)             = 212
+846   openat(AT_FDCWD, "testcases/testcase.4", O_RDONLY <unfinished ...>
+845   read(5, "a", 1)                   = 1
+846   <... openat resumed>)             = 5
+845   read(5,  <unfinished ...>
+846   openat(AT_FDCWD, "output/output.4", O_WRONLY|O_CREAT, 0666 <unfinished ...>
+845   <... read resumed>"l", 1)         = 1
+845   read(5,  <unfinished ...>
+846   <... openat resumed>)             = 6
+845   <... read resumed>"l", 1)         = 1
+846   dup2(6, 1 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... dup2 resumed>)               = 1
+845   <... read resumed>":", 1)         = 1
+846   dup2(3, 0 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... dup2 resumed>)               = 0
+845   <... read resumed>" ", 1)         = 1
+846   close(4 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... close resumed>)              = 0
+845   <... read resumed>"e", 1)         = 1
+846   execve("./encrypt", ["encrypt"], 0x7ffc519f3418 /* 18 vars */ <unfinished ...>
+845   read(5, "n", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "v", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "n", 1)                   = 1
+845   read(5,  <unfinished ...>
+846   <... execve resumed>)             = 0
+845   <... read resumed>"c", 1)         = 1
+845   read(5, "r", 1)                   = 1
+846   brk(NULL <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... brk resumed>)                = 0x58667c88c000
+845   <... read resumed>"y", 1)         = 1
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+846   arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe88e16fd0 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... arch_prctl resumed>)         = -1 EINVAL (Invalid argument)
+845   <... read resumed>" ", 1)         = 1
+845   read(5, "d", 1)                   = 1
+846   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+845   read(5, "e", 1)                   = 1
+846   <... mmap resumed>)               = 0x7a9e204de000
+845   read(5, "c", 1)                   = 1
+846   access("/etc/ld.so.preload", R_OK <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... access resumed>)             = -1 ENOENT (No such file or directory)
+845   <... read resumed>"r", 1)         = 1
+846   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+845   read(5, "y", 1)                   = 1
+846   <... openat resumed>)             = 4
+845   read(5,  <unfinished ...>
+846   newfstatat(4, "",  <unfinished ...>
+845   <... read resumed>"p", 1)         = 1
+846   <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+845   read(5,  <unfinished ...>
+846   mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 4, 0 <unfinished ...>
+845   <... read resumed>"t", 1)         = 1
+846   <... mmap resumed>)               = 0x7a9e204d6000
+845   read(5,  <unfinished ...>
+846   close(4 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... close resumed>)              = 0
+846   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+845   write(4, "28\nall: encdrv encrypt decrypt\n", 31 <unfinished ...>
+846   <... openat resumed>)             = 4
+845   <... write resumed>)              = 31
+846   read(4,  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+845   <... read resumed>"\n", 1)        = 1
+846   pread64(4,  <unfinished ...>
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+845   <... write resumed>)              = 3
+846   pread64(4,  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... pread64 resumed>"\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+845   <... read resumed>"e", 1)         = 1
+846   pread64(4,  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... pread64 resumed>"\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+845   <... read resumed>"n", 1)         = 1
+846   newfstatat(4, "",  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... newfstatat resumed>{st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+845   <... read resumed>"c", 1)         = 1
+846   pread64(4,  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+845   <... read resumed>"r", 1)         = 1
+846   mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0 <unfinished ...>
+845   read(5, "y", 1)                   = 1
+846   <... mmap resumed>)               = 0x7a9e202ad000
+845   read(5,  <unfinished ...>
+846   mprotect(0x7a9e202d5000, 2023424, PROT_NONE <unfinished ...>
+845   <... read resumed>"p", 1)         = 1
+845   read(5,  <unfinished ...>
+846   <... mprotect resumed>)           = 0
+845   <... read resumed>"t", 1)         = 1
+846   mmap(0x7a9e202d5000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x28000 <unfinished ...>
+845   read(5, ":", 1)                   = 1
+846   <... mmap resumed>)               = 0x7a9e202d5000
+845   read(5,  <unfinished ...>
+846   mmap(0x7a9e2046a000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1bd000 <unfinished ...>
+845   <... read resumed>"e", 1)         = 1
+845   read(5,  <unfinished ...>
+846   <... mmap resumed>)               = 0x7a9e2046a000
+845   <... read resumed>"n", 1)         = 1
+846   mmap(0x7a9e204c3000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x215000 <unfinished ...>
+845   read(5, "c", 1)                   = 1
+846   <... mmap resumed>)               = 0x7a9e204c3000
+845   read(5, "r", 1)                   = 1
+846   mmap(0x7a9e204c9000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+845   read(5, "y", 1)                   = 1
+846   <... mmap resumed>)               = 0x7a9e204c9000
+845   read(5, "p", 1)                   = 1
+846   close(4 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... close resumed>)              = 0
+845   <... read resumed>"t", 1)         = 1
+845   read(5,  <unfinished ...>
+846   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+845   <... read resumed>".", 1)         = 1
+846   <... mmap resumed>)               = 0x7a9e202aa000
+845   read(5, "c", 1)                   = 1
+846   arch_prctl(ARCH_SET_FS, 0x7a9e202aa740 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... arch_prctl resumed>)         = 0
+845   <... read resumed>"\n", 1)        = 1
+846   set_tid_address(0x7a9e202aaa10 <unfinished ...>
+845   write(4, "18\nencrypt:encrypt.c\n", 21 <unfinished ...>
+846   <... set_tid_address resumed>)    = 846
+845   <... write resumed>)              = 21
+846   set_robust_list(0x7a9e202aaa20, 24 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... set_robust_list resumed>)    = 0
+845   <... read resumed>"\t", 1)        = 1
+846   rseq(0x7a9e202ab0e0, 0x20, 0, 0x53053053 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... rseq resumed>)               = 0
+845   <... read resumed>"g", 1)         = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+846   mprotect(0x7a9e204c3000, 16384, PROT_READ <unfinished ...>
+845   read(5, " ", 1)                   = 1
+846   <... mprotect resumed>)           = 0
+845   read(5, "e", 1)                   = 1
+846   mprotect(0x58667b880000, 4096, PROT_READ <unfinished ...>
+845   read(5, "n", 1)                   = 1
+846   <... mprotect resumed>)           = 0
+845   read(5, "c", 1)                   = 1
+846   mprotect(0x7a9e20518000, 8192, PROT_READ <unfinished ...>
+845   read(5, "r", 1)                   = 1
+846   <... mprotect resumed>)           = 0
+845   read(5, "y", 1)                   = 1
+846   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+845   <... read resumed>"p", 1)         = 1
+845   read(5,  <unfinished ...>
+846   munmap(0x7a9e204d6000, 29392 <unfinished ...>
+845   <... read resumed>"t", 1)         = 1
+845   read(5,  <unfinished ...>
+846   <... munmap resumed>)             = 0
+845   <... read resumed>".", 1)         = 1
+845   read(5, "c", 1)                   = 1
+846   newfstatat(0, "",  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... newfstatat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+845   <... read resumed>" ", 1)         = 1
+846   getrandom( <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... getrandom resumed>"\x27\xec\x19\xc9\x2a\x00\xd1\x6c", 8, GRND_NONBLOCK) = 8
+845   <... read resumed>"-", 1)         = 1
+846   brk(NULL <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... brk resumed>)                = 0x58667c88c000
+845   <... read resumed>"o", 1)         = 1
+846   brk(0x58667c8ad000 <unfinished ...>
+845   read(5, " ", 1)                   = 1
+846   <... brk resumed>)                = 0x58667c8ad000
+845   read(5, "e", 1)                   = 1
+846   read(0,  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... read resumed>"28\nall: encdrv encrypt decrypt\n1"..., 4096) = 55
+845   <... read resumed>"n", 1)         = 1
+845   read(5, "c", 1)                   = 1
+846   newfstatat(1, "",  <unfinished ...>
+845   read(5, "r", 1)                   = 1
+846   <... newfstatat resumed>{st_mode=S_IFREG|0664, st_size=0, ...}, AT_EMPTY_PATH) = 0
+845   read(5, "y", 1)                   = 1
+846   write(1, "28\n}pp&<yr\177xnj<yr\177nelh<xy\177nelh\26", 31 <unfinished ...>
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "26\n\tgcc encrypt.c -o encrypt\n", 29 <unfinished ...>
+846   <... write resumed>)              = 31
+845   <... write resumed>)              = 29
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 3
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   write(1, "18\nw|q`kbf(w|q`kbf<q\30", 21 <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... write resumed>)              = 21
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"d", 1)         = 1
+846   <... read resumed>"26\n\tgcc encrypt.c -o encrypt\n1\n\n", 4096) = 32
+845   read(5,  <unfinished ...>
+846   write(1, "26\n\23}yy:\177tyhcjn4y:7u:\177tyhcjn\20", 29 <unfinished ...>
+845   <... read resumed>"e", 1)         = 1
+846   <... write resumed>)              = 29
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"c", 1)         = 1
+846   <... write resumed>)              = 3
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"r", 1)         = 1
+845   read(5, "y", 1)                   = 1
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+845   read(5, ":", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "y", 1)                   = 1
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+845   read(5, ".", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "18\ndecrypt:decrypt.c\n", 21) = 21
+846   <... read resumed>"18\ndecrypt:decrypt.c\n", 4096) = 21
+845   read(5,  <unfinished ...>
+846   write(1, "18\nvwq`kbf(vwq`kbf<q\30", 21 <unfinished ...>
+845   <... read resumed>"\t", 1)        = 1
+846   <... write resumed>)              = 21
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"g", 1)         = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "y", 1)                   = 1
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+845   read(5, ".", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "-", 1)                   = 1
+845   read(5, "o", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "y", 1)                   = 1
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "26\n\tgcc decrypt.c -o decrypt\n", 29) = 29
+846   <... read resumed>"26\n\tgcc decrypt.c -o decrypt\n", 4096) = 29
+845   read(5,  <unfinished ...>
+846   write(1, "26\n\23}yy:~\177yhcjn4y:7u:~\177yhcjn\20", 29 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   <... write resumed>)              = 29
+845   <... write resumed>)              = 3
+846   read(0,  <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   <... read resumed>"e", 1)         = 1
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   read(5,  <unfinished ...>
+846   <... write resumed>)              = 3
+845   <... read resumed>"n", 1)         = 1
+846   read(0,  <unfinished ...>
+845   read(5, "c", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "v", 1)                   = 1
+845   read(5, ":", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "n", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "v", 1)                   = 1
+845   read(5, ".", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "16\nencdrv:encdrv.c\n", 19) = 19
+846   <... read resumed>"16\nencdrv:encdrv.c\n", 4096) = 19
+845   read(5,  <unfinished ...>
+846   write(1, "16\nu~stbf*u~stbf>s\32", 19 <unfinished ...>
+845   <... read resumed>"\t", 1)        = 1
+846   <... write resumed>)              = 19
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"g", 1)         = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "n", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "v", 1)                   = 1
+845   read(5, ".", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "-", 1)                   = 1
+845   read(5, "o", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "n", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "v", 1)                   = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "24\n\tgcc encdrv.c -o encdrv\n", 27) = 27
+846   <... read resumed>"24\n\tgcc encdrv.c -o encdrv\n", 4096) = 27
+845   read(5,  <unfinished ...>
+846   write(1, "24\n\21\177{{8}v{|jn6{85w8}v{|jn\22", 27 <unfinished ...>
+845   <... read resumed>"c", 1)         = 1
+846   <... write resumed>)              = 27
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"l", 1)         = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "a", 1)                   = 1
+845   read(5, "n", 1)                   = 1
+845   read(5, ":", 1)                   = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "7\nclean:\n", 9)        = 9
+846   <... read resumed>"7\nclean:\n", 4096) = 9
+845   read(5,  <unfinished ...>
+846   write(1, "7\ndkbfi=\r", 9 <unfinished ...>
+845   <... read resumed>"\t", 1)        = 1
+846   <... write resumed>)              = 9
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"r", 1)         = 1
+845   read(5, "m", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "-", 1)                   = 1
+845   read(5, "f", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "n", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "v", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "n", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "y", 1)                   = 1
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+845   read(5, " ", 1)                   = 1
+845   read(5, "d", 1)                   = 1
+845   read(5, "e", 1)                   = 1
+845   read(5, "c", 1)                   = 1
+845   read(5, "r", 1)                   = 1
+845   read(5, "y", 1)                   = 1
+845   read(5, "p", 1)                   = 1
+845   read(5, "t", 1)                   = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "30\n\trm -f encdrv encrypt decrypt"..., 33) = 33
+846   <... read resumed>"30\n\trm -f encdrv encrypt decrypt"..., 4096) = 33
+845   read(5,  <unfinished ...>
+846   write(1, "30\n\27ls>3x>{p}zlh>{p}lgnj>z{}lgnj"..., 33 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 33
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"\t", 1)        = 1
+846   <... write resumed>)              = 3
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"\t", 1)        = 1
+845   read(5, "\t", 1)                  = 1
+845   read(5, "\t", 1)                  = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "5\n\t\t\t\t\n", 7)      = 7
+846   <... read resumed>"5\n\t\t\t\t\n", 4096) = 7
+845   read(5,  <unfinished ...>
+846   write(1, "5\n\f\f\f\f\17", 7 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 7
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 3
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 3
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"\t", 1)        = 1
+846   <... write resumed>)              = 3
+845   read(5,  <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... read resumed>"\t", 1)        = 1
+845   read(5, "\t", 1)                  = 1
+845   read(5, "\n", 1)                  = 1
+845   write(4, "4\n\t\t\t\n", 6)        = 6
+846   <... read resumed>"4\n\t\t\t\n", 4096) = 6
+845   read(5,  <unfinished ...>
+846   write(1, "4\n\r\r\r\16", 6 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 6
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 3
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   read(5,  <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... read resumed>"\n", 1)        = 1
+846   <... write resumed>)              = 3
+845   write(4, "1\n\n", 3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... write resumed>)              = 3
+846   <... read resumed>"1\n\n", 4096)  = 3
+845   close(4 <unfinished ...>
+846   write(1, "1\n\v", 3 <unfinished ...>
+845   <... close resumed>)              = 0
+846   <... write resumed>)              = 3
+845   close(3 <unfinished ...>
+846   read(0,  <unfinished ...>
+845   <... close resumed>)              = 0
+846   <... read resumed>"", 4096)       = 0
+845   exit_group(0 <unfinished ...>
+846   exit_group(0 <unfinished ...>
+845   <... exit_group resumed>)         = ?
+846   <... exit_group resumed>)         = ?
+845   +++ exited with 0 +++
+846   +++ exited with 0 +++

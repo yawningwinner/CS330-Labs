@@ -1,0 +1,1412 @@
+834   execve("./encdrv", ["./encdrv", "testcases/testcase.3", "output/output.3"], 0x7fffda0b4f18 /* 18 vars */) = 0
+834   brk(NULL)                         = 0x60ac62f3a000
+834   arch_prctl(0x3001 /* ARCH_??? */, 0x7fff4665bcf0) = -1 EINVAL (Invalid argument)
+834   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x766e4afdd000
+834   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+834   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+834   newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+834   mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x766e4afd5000
+834   close(3)                          = 0
+834   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+834   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+834   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+834   pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+834   pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+834   newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+834   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+834   mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x766e4adac000
+834   mprotect(0x766e4add4000, 2023424, PROT_NONE) = 0
+834   mmap(0x766e4add4000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x766e4add4000
+834   mmap(0x766e4af69000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x766e4af69000
+834   mmap(0x766e4afc2000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x766e4afc2000
+834   mmap(0x766e4afc8000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x766e4afc8000
+834   close(3)                          = 0
+834   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x766e4ada9000
+834   arch_prctl(ARCH_SET_FS, 0x766e4ada9740) = 0
+834   set_tid_address(0x766e4ada9a10)   = 834
+834   set_robust_list(0x766e4ada9a20, 24) = 0
+834   rseq(0x766e4adaa0e0, 0x20, 0, 0x53053053) = 0
+834   mprotect(0x766e4afc2000, 16384, PROT_READ) = 0
+834   mprotect(0x60ac61e0c000, 4096, PROT_READ) = 0
+834   mprotect(0x766e4b017000, 8192, PROT_READ) = 0
+834   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+834   munmap(0x766e4afd5000, 29392)     = 0
+834   pipe2([3, 4], 0)                  = 0
+834   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x766e4ada9a10) = 835
+834   openat(AT_FDCWD, "testcases/testcase.3", O_RDONLY) = 5
+834   openat(AT_FDCWD, "output/output.3", O_WRONLY|O_CREAT, 0666 <unfinished ...>
+835   set_robust_list(0x766e4ada9a20, 24 <unfinished ...>
+834   <... openat resumed>)             = 6
+835   <... set_robust_list resumed>)    = 0
+834   openat(AT_FDCWD, "testcases/testcase.3", O_RDONLY) = 7
+835   openat(AT_FDCWD, "testcases/testcase.3", O_RDONLY <unfinished ...>
+834   lseek(7, 0, SEEK_END)             = 908
+835   <... openat resumed>)             = 5
+834   read(5,  <unfinished ...>
+835   openat(AT_FDCWD, "output/output.3", O_WRONLY|O_CREAT, 0666 <unfinished ...>
+834   <... read resumed>"#", 1)         = 1
+835   <... openat resumed>)             = 6
+834   read(5,  <unfinished ...>
+835   dup2(6, 1 <unfinished ...>
+834   <... read resumed>"i", 1)         = 1
+835   <... dup2 resumed>)               = 1
+834   read(5,  <unfinished ...>
+835   dup2(3, 0 <unfinished ...>
+834   <... read resumed>"n", 1)         = 1
+835   <... dup2 resumed>)               = 0
+834   read(5,  <unfinished ...>
+835   close(4 <unfinished ...>
+834   <... read resumed>"c", 1)         = 1
+835   <... close resumed>)              = 0
+834   read(5,  <unfinished ...>
+835   execve("./encrypt", ["encrypt"], 0x7fff4665bed8 /* 18 vars */ <unfinished ...>
+834   <... read resumed>"l", 1)         = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "<", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+835   <... execve resumed>)             = 0
+834   read(5, "d", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+835   brk(NULL <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... brk resumed>)                = 0x5c03ae0b3000
+834   <... read resumed>"o", 1)         = 1
+834   read(5, ".", 1)                   = 1
+834   read(5,  <unfinished ...>
+835   arch_prctl(0x3001 /* ARCH_??? */, 0x7fff85dddaf0 <unfinished ...>
+834   <... read resumed>"h", 1)         = 1
+835   <... arch_prctl resumed>)         = -1 EINVAL (Invalid argument)
+834   read(5, ">", 1)                   = 1
+834   read(5,  <unfinished ...>
+835   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+835   <... mmap resumed>)               = 0x75e1a60bc000
+835   access("/etc/ld.so.preload", R_OK <unfinished ...>
+834   write(4, "18\n#include<stdio.h>\n", 21 <unfinished ...>
+835   <... access resumed>)             = -1 ENOENT (No such file or directory)
+834   <... write resumed>)              = 21
+835   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+834   read(5, "#", 1)                   = 1
+835   <... openat resumed>)             = 4
+834   read(5,  <unfinished ...>
+835   newfstatat(4, "",  <unfinished ...>
+834   <... read resumed>"i", 1)         = 1
+835   <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+834   read(5,  <unfinished ...>
+835   mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 4, 0 <unfinished ...>
+834   <... read resumed>"n", 1)         = 1
+835   <... mmap resumed>)               = 0x75e1a60b4000
+834   read(5,  <unfinished ...>
+835   close(4 <unfinished ...>
+834   <... read resumed>"c", 1)         = 1
+835   <... close resumed>)              = 0
+834   read(5, "l", 1)                   = 1
+835   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+834   read(5, "u", 1)                   = 1
+835   <... openat resumed>)             = 4
+834   read(5,  <unfinished ...>
+835   read(4,  <unfinished ...>
+834   <... read resumed>"d", 1)         = 1
+835   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+834   read(5,  <unfinished ...>
+835   pread64(4,  <unfinished ...>
+834   <... read resumed>"e", 1)         = 1
+835   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+834   read(5,  <unfinished ...>
+835   pread64(4,  <unfinished ...>
+834   <... read resumed>"<", 1)         = 1
+835   <... pread64 resumed>"\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+834   read(5,  <unfinished ...>
+835   pread64(4,  <unfinished ...>
+834   <... read resumed>"s", 1)         = 1
+835   <... pread64 resumed>"\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+834   read(5,  <unfinished ...>
+835   newfstatat(4, "",  <unfinished ...>
+834   <... read resumed>"t", 1)         = 1
+835   <... newfstatat resumed>{st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+834   read(5,  <unfinished ...>
+835   pread64(4,  <unfinished ...>
+834   <... read resumed>"d", 1)         = 1
+835   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+834   read(5,  <unfinished ...>
+835   mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0 <unfinished ...>
+834   <... read resumed>"l", 1)         = 1
+835   <... mmap resumed>)               = 0x75e1a5e8b000
+834   read(5,  <unfinished ...>
+835   mprotect(0x75e1a5eb3000, 2023424, PROT_NONE <unfinished ...>
+834   <... read resumed>"i", 1)         = 1
+834   read(5,  <unfinished ...>
+835   <... mprotect resumed>)           = 0
+834   <... read resumed>"b", 1)         = 1
+835   mmap(0x75e1a5eb3000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x28000 <unfinished ...>
+834   read(5, ".", 1)                   = 1
+835   <... mmap resumed>)               = 0x75e1a5eb3000
+834   read(5,  <unfinished ...>
+835   mmap(0x75e1a6048000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1bd000 <unfinished ...>
+834   <... read resumed>"h", 1)         = 1
+835   <... mmap resumed>)               = 0x75e1a6048000
+834   read(5,  <unfinished ...>
+835   mmap(0x75e1a60a1000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x215000 <unfinished ...>
+834   <... read resumed>">", 1)         = 1
+834   read(5,  <unfinished ...>
+835   <... mmap resumed>)               = 0x75e1a60a1000
+834   <... read resumed>"\n", 1)        = 1
+835   mmap(0x75e1a60a7000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+834   write(4, "19\n#include<stdlib.h>\n", 22 <unfinished ...>
+835   <... mmap resumed>)               = 0x75e1a60a7000
+834   <... write resumed>)              = 22
+834   read(5,  <unfinished ...>
+835   close(4 <unfinished ...>
+834   <... read resumed>"#", 1)         = 1
+835   <... close resumed>)              = 0
+834   read(5, "i", 1)                   = 1
+835   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... mmap resumed>)               = 0x75e1a5e88000
+834   <... read resumed>"n", 1)         = 1
+835   arch_prctl(ARCH_SET_FS, 0x75e1a5e88740 <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... arch_prctl resumed>)         = 0
+834   <... read resumed>"c", 1)         = 1
+835   set_tid_address(0x75e1a5e88a10 <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... set_tid_address resumed>)    = 835
+834   <... read resumed>"l", 1)         = 1
+835   set_robust_list(0x75e1a5e88a20, 24 <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... set_robust_list resumed>)    = 0
+834   <... read resumed>"u", 1)         = 1
+835   rseq(0x75e1a5e890e0, 0x20, 0, 0x53053053 <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... rseq resumed>)               = 0
+834   <... read resumed>"d", 1)         = 1
+834   read(5, "e", 1)                   = 1
+835   mprotect(0x75e1a60a1000, 16384, PROT_READ <unfinished ...>
+834   read(5, "<", 1)                   = 1
+835   <... mprotect resumed>)           = 0
+834   read(5, "a", 1)                   = 1
+835   mprotect(0x5c03ac77e000, 4096, PROT_READ <unfinished ...>
+834   read(5, "s", 1)                   = 1
+835   <... mprotect resumed>)           = 0
+834   read(5, "s", 1)                   = 1
+835   mprotect(0x75e1a60f6000, 8192, PROT_READ <unfinished ...>
+834   read(5, "e", 1)                   = 1
+835   <... mprotect resumed>)           = 0
+834   read(5, "r", 1)                   = 1
+835   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+834   <... read resumed>"t", 1)         = 1
+834   read(5,  <unfinished ...>
+835   munmap(0x75e1a60b4000, 29392 <unfinished ...>
+834   <... read resumed>".", 1)         = 1
+834   read(5,  <unfinished ...>
+835   <... munmap resumed>)             = 0
+834   <... read resumed>"h", 1)         = 1
+834   read(5, ">", 1)                   = 1
+835   newfstatat(0, "",  <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... newfstatat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+834   <... read resumed>"\n", 1)        = 1
+835   getrandom( <unfinished ...>
+834   write(4, "19\n#include<assert.h>\n", 22 <unfinished ...>
+835   <... getrandom resumed>"\xe1\x56\x2d\x0e\x42\xdd\x94\xa5", 8, GRND_NONBLOCK) = 8
+834   <... write resumed>)              = 22
+835   brk(NULL <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... brk resumed>)                = 0x5c03ae0b3000
+834   <... read resumed>"\n", 1)        = 1
+835   brk(0x5c03ae0d4000 <unfinished ...>
+834   write(4, "1\n\n", 3 <unfinished ...>
+835   <... brk resumed>)                = 0x5c03ae0d4000
+834   <... write resumed>)              = 3
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"#", 1)         = 1
+835   <... read resumed>"18\n#include<stdio.h>\n19\n#include"..., 4096) = 68
+834   read(5, "d", 1)                   = 1
+835   newfstatat(1, "",  <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... newfstatat resumed>{st_mode=S_IFREG|0664, st_size=0, ...}, AT_EMPTY_PATH) = 0
+834   <... read resumed>"e", 1)         = 1
+834   read(5,  <unfinished ...>
+835   write(1, "18\n1{|q~gvw.afv{}<z,\30", 21 <unfinished ...>
+834   <... read resumed>"f", 1)         = 1
+834   read(5, "i", 1)                   = 1
+835   <... write resumed>)              = 21
+834   read(5,  <unfinished ...>
+835   write(1, "19\n0z}p\177fwv/`gw\177zq={-\31", 22 <unfinished ...>
+834   <... read resumed>"n", 1)         = 1
+835   <... write resumed>)              = 22
+834   read(5,  <unfinished ...>
+835   write(1, "19\n0z}p\177fwv/r``vag={-\31", 22 <unfinished ...>
+834   <... read resumed>"e", 1)         = 1
+835   <... write resumed>)              = 22
+834   read(5,  <unfinished ...>
+835   write(1, "1\n\v", 3 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 3
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"M", 1)         = 1
+834   read(5, "A", 1)                   = 1
+834   read(5, "X", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "C", 1)                   = 1
+834   read(5, "H", 1)                   = 1
+834   read(5, "A", 1)                   = 1
+834   read(5, "R", 1)                   = 1
+834   read(5, "S", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "I", 1)                   = 1
+834   read(5, "N", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "L", 1)                   = 1
+834   read(5, "I", 1)                   = 1
+834   read(5, "N", 1)                   = 1
+834   read(5, "E", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "5", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "31\n#define MAX_CHARS_IN_LINE 500"..., 34) = 34
+835   <... read resumed>"31\n#define MAX_CHARS_IN_LINE 500"..., 4096) = 34
+834   read(5,  <unfinished ...>
+835   write(1, "31\n<{zyvqz?R^G@\\W^ML@VQ@SVQZ?*//"..., 34 <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+835   <... write resumed>)              = 34
+834   write(4, "1\n\n", 3 <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... write resumed>)              = 3
+835   <... read resumed>"1\n\n", 4096)  = 3
+834   read(5,  <unfinished ...>
+835   write(1, "1\n\v", 3 <unfinished ...>
+834   <... read resumed>"i", 1)         = 1
+835   <... write resumed>)              = 3
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"n", 1)         = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "g", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "F", 1)                   = 1
+834   read(5, "I", 1)                   = 1
+834   read(5, "L", 1)                   = 1
+834   read(5, "E", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "*", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "23\nint get_len(FILE *fpt)\n", 26) = 26
+835   <... read resumed>"23\nint get_len(FILE *fpt)\n", 4096) = 26
+834   read(5,  <unfinished ...>
+835   write(1, "23\n~yc7prcH{ry?Q^[R7=qgc>\35", 26 <unfinished ...>
+834   <... read resumed>"{", 1)         = 1
+835   <... write resumed>)              = 26
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+834   write(4, "2\n{\n", 4)             = 4
+835   <... read resumed>"2\n{\n", 4096) = 4
+834   read(5,  <unfinished ...>
+835   write(1, "2\ny\10", 4 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 4
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "b", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "[", 1)                   = 1
+834   read(5, "3", 1)                   = 1
+834   read(5, "2", 1)                   = 1
+834   read(5, "]", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "17\n   char buf[32];\n", 20) = 20
+835   <... read resumed>"17\n   char buf[32];\n", 4096) = 20
+834   read(5,  <unfinished ...>
+835   write(1, "17\n111rypc1sdwJ\"#L*\33", 20 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 20
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "19\n   int ctr = 0;   \n", 22) = 22
+835   <... read resumed>"19\n   int ctr = 0;   \n", 4096) = 22
+834   read(5,  <unfinished ...>
+835   write(1, "19\n333z}g3pga3.3#(333\31", 22 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 22
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "w", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "!", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "{", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "22\n   while(!feof(fpt)){\n", 25) = 25
+835   <... read resumed>"22\n   while(!feof(fpt)){\n", 4096) = 25
+834   read(5,  <unfinished ...>
+835   write(1, "22\n666a~\177zs>7psyp>pfb??m\34", 25 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 25
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "g", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "25\n\t   int ch = fgetc(fpt);\n", 28) = 28
+835   <... read resumed>"25\n\t   int ch = fgetc(fpt);\n", 4096) = 28
+834   read(5,  <unfinished ...>
+835   write(1, "25\n\20999pwm9zq9$9\177~|mz1\177im0\"\23", 28 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 28
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "18\n\t   if(feof(fpt))\n", 21) = 21
+835   <... read resumed>"18\n\t   if(feof(fpt))\n", 4096) = 21
+834   read(5,  <unfinished ...>
+835   write(1, "18\n\033222{t:tw}t:tbf;;\30", 21 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 21
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "x", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "12\n\t\t exit(0);\n", 15) = 15
+835   <... read resumed>"12\n\t\t exit(0);\n", 4096) = 15
+834   read(5,  <unfinished ...>
+835   write(1, "12\n\5\5,itex$<%7\6", 15 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 15
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "'", 1)                   = 1
+834   read(5, "\\", 1)                  = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "'", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "{", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "20\n\t   if(ch == '\\n'){\n", 23) = 23
+835   <... read resumed>"20\n\t   if(ch == '\\n'){\n", 4096) = 23
+834   read(5,  <unfinished ...>
+835   write(1, "20\n\035444}r<w|4))43Hz3=o\36", 23 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 23
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+834   read(5, "b", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "[", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "]", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "16\n\t\tbuf[ctr] = 0;\n", 19) = 19
+835   <... read resumed>"16\n\t\tbuf[ctr] = 0;\n", 4096) = 19
+834   read(5,  <unfinished ...>
+835   write(1, "16\n\31\31revKsdbM0-0 +\32", 19 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 19
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "b", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "20\n\t\treturn atoi(buf);\n", 23) = 23
+835   <... read resumed>"20\n\t\treturn atoi(buf);\n", 4096) = 23
+834   read(5,  <unfinished ...>
+835   write(1, "20\n\35\35fq`afz4u`{}<var=/\36", 23 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 23
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "}", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "6\n\t   }\n", 8)        = 8
+835   <... read resumed>"6\n\t   }\n", 4096) = 8
+834   read(5,  <unfinished ...>
+835   write(1, "6\n\17&&&{\f", 8 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 8
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "b", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "[", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "]", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "19\n\t   buf[ctr] = ch;\n", 22) = 22
+835   <... read resumed>"19\n\t   buf[ctr] = ch;\n", 4096) = 22
+834   read(5,  <unfinished ...>
+835   write(1, "19\n\032333qfuHpgaN3.3p{(\31", 22 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 22
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "+", 1)                   = 1
+834   read(5, "+", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "11\n\t   ++ctr;\n", 14) = 14
+835   <... read resumed>"11\n\t   ++ctr;\n", 4096) = 14
+834   read(5,  <unfinished ...>
+835   write(1, "11\n\2+++  h\177y0\1", 14 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 14
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, ">", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "1", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "18\n\t   if(ctr >= 10)\n", 21) = 21
+835   <... read resumed>"18\n\t   if(ctr >= 10)\n", 4096) = 21
+834   read(5,  <unfinished ...>
+835   write(1, "18\n\033222{t:qf`2,/2#\";\30", 21 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 21
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "-", 1)                   = 1
+834   read(5, "1", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "16\n\t\t   return -1;\n", 19) = 19
+835   <... read resumed>"16\n\t\t   return -1;\n", 4096) = 19
+834   read(5,  <unfinished ...>
+835   write(1, "16\n\31\031000budeb~0=!+\32", 19 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 19
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "}", 1)                   = 1
+834   read(5, "\t", 1)                  = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "9\n   }\t   \n", 11)    = 11
+835   <... read resumed>"9\n   }\t   \n", 4096) = 11
+834   read(5,  <unfinished ...>
+835   write(1, "9\n)))t\0)))\3", 11 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 11
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "17\n   if(feof(fpt))\n", 20) = 20
+835   <... read resumed>"17\n   if(feof(fpt))\n", 4096) = 20
+834   read(5,  <unfinished ...>
+835   write(1, "17\n111xw9wt~w9wae88\33", 20 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 20
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "x", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "13\n\t   exit(0);\n", 16) = 16
+835   <... read resumed>"13\n\t   exit(0);\n", 4096) = 16
+834   read(5,  <unfinished ...>
+835   write(1, "13\n\4---hudy%=$6\7", 16 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 16
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "b", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "21\n   return atoi(buf);\n", 24) = 24
+835   <... read resumed>"21\n   return atoi(buf);\n", 4096) = 24
+834   read(5,  <unfinished ...>
+835   write(1, "21\n555gpa`g{5taz|=w`s<.\37", 24 <unfinished ...>
+834   <... read resumed>"}", 1)         = 1
+835   <... write resumed>)              = 24
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+834   write(4, "2\n}\n", 4)             = 4
+835   <... read resumed>"2\n}\n", 4096) = 4
+834   read(5,  <unfinished ...>
+835   write(1, "2\n\177\10", 4 <unfinished ...>
+834   <... read resumed>"i", 1)         = 1
+835   <... write resumed>)              = 4
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"n", 1)         = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "v", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "15\nint main(void)\n", 18) = 18
+835   <... read resumed>"15\nint main(void)\n", 4096) = 18
+834   read(5,  <unfinished ...>
+835   write(1, "15\nfa{/bnfa'y`fk&\5", 18 <unfinished ...>
+834   <... read resumed>"{", 1)         = 1
+835   <... write resumed>)              = 18
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+834   write(4, "2\n{\n", 4)             = 4
+835   <... read resumed>"2\n{\n", 4096) = 4
+834   read(5,  <unfinished ...>
+835   write(1, "2\ny\10", 4 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 4
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "18\n   int num_chars;\n", 21) = 21
+835   <... read resumed>"18\n   int num_chars;\n", 4096) = 21
+834   read(5,  <unfinished ...>
+835   write(1, "18\n222{|f2|g\177Mqzs`a)\30", 21 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 21
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "[", 1)                   = 1
+834   read(5, "M", 1)                   = 1
+834   read(5, "A", 1)                   = 1
+834   read(5, "X", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "C", 1)                   = 1
+834   read(5, "H", 1)                   = 1
+834   read(5, "A", 1)                   = 1
+834   read(5, "R", 1)                   = 1
+834   read(5, "S", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "I", 1)                   = 1
+834   read(5, "N", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "L", 1)                   = 1
+834   read(5, "I", 1)                   = 1
+834   read(5, "N", 1)                   = 1
+834   read(5, "E", 1)                   = 1
+834   read(5, "]", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "33\n   char line[MAX_CHARS_IN_LIN"..., 36) = 36
+835   <... read resumed>"33\n   char line[MAX_CHARS_IN_LIN"..., 4096) = 36
+834   read(5,  <unfinished ...>
+835   write(1, "33\n\1\1\1BI@S\1MHODzl`y~bi`sr~ho~mho"..., 36 <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+835   <... write resumed>)              = 36
+834   write(4, "1\n\n", 3 <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... write resumed>)              = 3
+835   <... read resumed>"1\n\n", 4096)  = 3
+834   read(5,  <unfinished ...>
+835   write(1, "1\n\v", 3 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 3
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "w", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "1", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "{", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "13\n   while(1){\n", 16) = 16
+835   <... read resumed>"13\n   while(1){\n", 4096) = 16
+834   read(5,  <unfinished ...>
+835   write(1, "13\n---zedah%<$v\7", 16 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 16
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "g", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "35\n       num_chars = get_len(st"..., 38) = 38
+835   <... read resumed>"35\n       num_chars = get_len(st"..., 4096) = 38
+834   read(5,  <unfinished ...>
+835   write(1, "35\n\3\3\3\3\3\3\3MVN|@KBQP\3\36\3DFW|OFM\vPW"..., 38 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 38
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "<", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "|", 1)                   = 1
+834   read(5, "|", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, ">", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "M", 1)                   = 1
+834   read(5, "A", 1)                   = 1
+834   read(5, "X", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "C", 1)                   = 1
+834   read(5, "H", 1)                   = 1
+834   read(5, "A", 1)                   = 1
+834   read(5, "R", 1)                   = 1
+834   read(5, "S", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "I", 1)                   = 1
+834   read(5, "N", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "L", 1)                   = 1
+834   read(5, "I", 1)                   = 1
+834   read(5, "N", 1)                   = 1
+834   read(5, "E", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "58\n       if(num_chars < 0 || nu"..., 61) = 61
+835   <... read resumed>"58\n       if(num_chars < 0 || nu"..., 4096) = 61
+834   read(5,  <unfinished ...>
+835   write(1, "58\n\32\32\32\32\32\32\32S\\\22TOWeYR[HI\32\6\32\n\32FF\32TO"..., 61 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 61
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "-", 1)                   = 1
+834   read(5, "1", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "18\n\t      return -1;\n", 21) = 21
+835   <... read resumed>"18\n\t      return -1;\n", 4096) = 21
+834   read(5,  <unfinished ...>
+835   write(1, "18\n\033222222`wfg`|2?#)\30", 21 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 21
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "/", 1)                   = 1
+834   read(5, "/", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, ",", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "\"", 1)                  = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "%", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "\\", 1)                  = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "\"", 1)                  = 1
+834   read(5, ",", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "55\n       //fprintf(stderr, \"num"..., 58) = 58
+835   <... read resumed>"55\n       //fprintf(stderr, \"num"..., 4096) = 58
+834   read(5,  <unfinished ...>
+835   write(1, "55\n\27\27\27\27\27\27\27\30\30QGE^YCQ\37DCSREE\33\27\25YBZ"..., 58 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 58
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "\"", 1)                  = 1
+834   read(5, "%", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "\\", 1)                  = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "\"", 1)                  = 1
+834   read(5, ",", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "34\n       printf(\"%d\\n\", num_cha"..., 37) = 37
+835   <... read resumed>"34\n       printf(\"%d\\n\", num_cha"..., 4096) = 37
+834   read(5,  <unfinished ...>
+835   write(1, "34\n\2\2\2\2\2\2\2RPKLVD\n\0\7F~L\0\16\2LWO}AJC"..., 37 <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+835   <... write resumed>)              = 37
+834   write(4, "1\n\n", 3 <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... write resumed>)              = 3
+835   <... read resumed>"1\n\n", 4096)  = 3
+834   read(5,  <unfinished ...>
+835   write(1, "1\n\v", 3 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 3
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, ",", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "1", 1)                   = 1
+834   read(5, ",", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, ",", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "!", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "57\n       if(fread(line, 1, num_"..., 60) = 60
+835   <... read resumed>"57\n       if(fread(line, 1, num_"..., 4096) = 60
+834   read(5,  <unfinished ...>
+835   write(1, "57\n\31\31\31\31\31\31\31P_\21_K\\X]\21UPW\\\25\31\10\25\31WLTf"..., 60 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 60
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "18\n\t       return 0;\n", 21) = 21
+835   <... read resumed>"18\n\t       return 0;\n", 4096) = 21
+834   read(5,  <unfinished ...>
+835   write(1, "18\n\0332222222`wfg`|2\")\30", 21 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 21
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "=", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "<", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "+", 1)                   = 1
+834   read(5, "+", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, "{", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "39\n       for(int i=0; i<num_cha"..., 42) = 42
+835   <... read resumed>"39\n       for(int i=0; i<num_cha"..., 4096) = 42
+834   read(5,  <unfinished ...>
+835   write(1, "39\n\7\7\7\7\7\7\7AHU\17NIS\7N\32\27\34\7N\33IRJxDOF"..., 42 <unfinished ...>
+834   <... read resumed>"\t", 1)        = 1
+835   <... write resumed>)              = 42
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "p", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "[", 1)                   = 1
+834   read(5, "i", 1)                   = 1
+834   read(5, "]", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "^", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "m", 1)                   = 1
+834   read(5, "_", 1)                   = 1
+834   read(5, "c", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "a", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, "%", 1)                   = 1
+834   read(5, "2", 1)                   = 1
+834   read(5, "5", 1)                   = 1
+834   read(5, "6", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "42\n\t     putchar(line[i] ^ (num_"..., 45) = 45
+835   <... read resumed>"42\n\t     putchar(line[i] ^ (num_"..., 4096) = 45
+834   read(5, " ", 1)                   = 1
+835   write(1, "42\n#\n\n\n\n\nZ_^IBKX\2FCDOqCw\nt\n\2D_Gu"..., 45 <unfinished ...>
+834   read(5,  <unfinished ...>
+835   <... write resumed>)              = 45
+834   <... read resumed>" ", 1)         = 1
+835   read(0,  <unfinished ...>
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "}", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "9\n       }\n", 11)     = 11
+835   <... read resumed>"9\n       }\n", 4096) = 11
+834   read(5,  <unfinished ...>
+835   write(1, "9\n)))))))t\3", 11 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+835   <... write resumed>)              = 11
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "f", 1)                   = 1
+834   read(5, "l", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, "h", 1)                   = 1
+834   read(5, "(", 1)                   = 1
+834   read(5, "s", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "d", 1)                   = 1
+834   read(5, "o", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, ")", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "23\n       fflush(stdout);\n", 26) = 26
+835   <... read resumed>"23\n       fflush(stdout);\n", 4096) = 26
+834   read(5,  <unfinished ...>
+835   write(1, "23\n7777777qq{bd\177?dcsxbc>,\35", 26 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 26
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "}", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "5\n   }\n", 7)          = 7
+835   <... read resumed>"5\n   }\n", 4096) = 7
+834   read(5,  <unfinished ...>
+835   write(1, "5\n%%%x\17", 7 <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+835   <... write resumed>)              = 7
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>" ", 1)         = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "e", 1)                   = 1
+834   read(5, "t", 1)                   = 1
+834   read(5, "u", 1)                   = 1
+834   read(5, "r", 1)                   = 1
+834   read(5, "n", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "0", 1)                   = 1
+834   read(5, ";", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, " ", 1)                   = 1
+834   read(5, "\n", 1)                  = 1
+834   write(4, "15\n   return 0;  \n", 18) = 18
+835   <... read resumed>"15\n   return 0;  \n", 4096) = 18
+834   read(5,  <unfinished ...>
+835   write(1, "15\n///}j{z}a/?4//\5", 18 <unfinished ...>
+834   <... read resumed>"}", 1)         = 1
+835   <... write resumed>)              = 18
+834   read(5,  <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... read resumed>"\n", 1)        = 1
+834   write(4, "2\n}\n", 4)             = 4
+835   <... read resumed>"2\n}\n", 4096) = 4
+834   close(4 <unfinished ...>
+835   write(1, "2\n\177\10", 4 <unfinished ...>
+834   <... close resumed>)              = 0
+835   <... write resumed>)              = 4
+834   close(3 <unfinished ...>
+835   read(0,  <unfinished ...>
+834   <... close resumed>)              = 0
+835   <... read resumed>"", 4096)       = 0
+835   exit_group(0 <unfinished ...>
+834   exit_group(0 <unfinished ...>
+835   <... exit_group resumed>)         = ?
+834   <... exit_group resumed>)         = ?
+834   +++ exited with 0 +++
+835   +++ exited with 0 +++
