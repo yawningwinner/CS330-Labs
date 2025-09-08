@@ -1,0 +1,33 @@
+	 /* XXX Do not change anything below XXX */
+
+	 printf("Relocated Code Segment:%lu:%lx\n", (unsigned long)reloc_code_addr, (unsigned long)reloc_code_addr);
+	 printf("Relocated Main function:%lu:%lx\n", (unsigned long)reloc_main, (unsigned long)reloc_main);
+	 
+	 //Call the relocated main function
+
+          asm volatile("mov %0, %%rax;"
+		       "xor %%rdi, %%rdi;"
+                       "callq *%%rax;"
+		       :
+		       : "m" (reloc_main)
+		       :"rdi", "rax", "memory"
+		      ); 
+	  exit(0);		  
+   }	   
+   
+
+   /*We check the RIP location after code relocation and call a couple of ``useless'' functions*/
+
+   unsigned long now_c;
+   unsigned folded;
+   asm volatile("lea (%%rip), %%rax;"
+		"mov %%rax, %0;"
+	        :"=m" (now_c)
+	        :
+	        :"rax", "memory"
+	        );	
+   printf("Now RIP:%lu:%lx\n", now_c, now_c);
+   folded = call_f1(now_c);
+   printf("Folded number: %x\n", folded);
+   return 0;  
+}
