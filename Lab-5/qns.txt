@@ -1,0 +1,49 @@
+Part1
+------
+
+Q1. Observe the PCB address of the processes for the provided test case #1. Compare that to any of the addresses in the user space and note down the differences.
+Ans : The stack address is : 0x7FFFFFB98
+The PCB address is : 0x20862C0
+So the PCB address is much smaller than the stack address since this is in accordance with the fact that kernal stack occupies the initial 4GB memory of the virtual address space after which the space for user is allocated.
+
+Q2. Observe the output for the provided testcase#3 and match the child-parent relationship with the code logic.
+pid 2 ppid 1 pcb@0x2086580 name init
+pid 1 ppid 0 pcb@0x20862C0 name init
+pid 3 ppid 1 pcb@0x2086840 name init
+pid 1 ppid 0 pcb@0x20862C0 name init
+Since according to the code, the first fork is called by the child of the parent process, hence the first pid would be of the child of the child. The next PINFO_GEN is called by the parent, hence you get the second ppid as 0.
+Part 2
+------
+Q1. Observe the output for the provided testcase #4. How many FDs correspond to pipes and what are their access permissions?
+Ans: There are two FDs that correspond to pipes. One has Read only permission, other has write only permission. This is at par with the actual implementation of pipe.
+Part 3
+-----
+
+Q1. Observe the stack segment information for testcase#2 and reason about it.
+Ans : Stack growth is automatically handelled by OS, the difference we see here is due to ptr = buf-8192; which shifts ptr two pages above buf in stack, thereby increasing stack memory by 2 pages. The data segment memory grew because of expand syscall.
+
+data: [0x180000000 - 0x1801FFFFF] next_free: 0x180001000 perm: RW_
+stack: [0x7FF000000 - 0x800000000] next_free: 0x7FFFFF000 perm: RW_
+After expanding RW data and stack
+data: [0x180000000 - 0x1801FFFFF] next_free: 0x180003000 perm: RW_
+stack: [0x7FF000000 - 0x800000000] next_free: 0x7FFFFD000 perm: RW_
+
+
+Part 4
+------
+
+Q1. Why is the number of VM areas less than the number of mmap calls for testcase#4?
+Ans: This is because of continous memory allocation, as can be confirmed by inspection :
+addr1 : 0x180201000 , addr2 : 0x180203000, addr3 : 0x180204000, addr4: 0x180205000
+Before:
+[0x180201000 - 0x180206000] perm: RW_
+After:
+[0x180202000 - 0x180206000] perm: RW_
+The VM area refers to a continous chunck of allocated memory (all have same permission).
+Q2. Why it is not so for testcase #3.
+Ans: This is because the memory allocated there had different permissions, hence can't be treated as a contigous chunck of memory.
+[0x180201000 - 0x180202000] perm: RW_
+[0x180202000 - 0x180203000] perm: RWX
+[0x180203000 - 0x180204000] perm: RW_
+[0x180204000 - 0x180205000] perm: RWX
+
