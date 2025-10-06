@@ -1,0 +1,40 @@
+Part1  
+------
+
+Q1. If you manually run the testcase#1 without performing any modifications, the OS hangs. Explain why?
+Ans1) This is because we are not handling anything in do_div_by_zero, hence when the OS returns to user space, it encounters the divison by zero exception again and it is directed back to do_div_by_zero again, and this continues.
+
+Q2. After building gemOS for testcase#1 (manually), run `objdump -D user/init.o`, examine the assembly for main to 
+    find the `idiv' instruction. Apart from the implicit "rax" register, which other register is used? 
+    Which registers is used as the numerator and which register as the denominator?
+Ans2) rax is used for numerator and rcx for denominator
+
+Part 2
+------
+
+Q1. After building gemOS for testcase#2 (manually), run `objdump -D user/init.o`, examine the assembly for main to 
+    find the `idiv' instruction. What is the length of the `idiv' instruction?
+Ans1) 3 bytes
+
+Q2. Can we use the register over-writing strategy for testcase2? why or why not?
+Ans2) No, because the values of the variables a and b are stored in the registers not on the stack, hence doing register overwriting would change the values of the variable.
+
+Q3. Which memory does the `regs' argument to do_div_by_zero (in hack.c) point to (hint: check the os_rsp value in exec_ctx)?
+Ans3) It is in the kernel stack, as can be seen by printing the addresses of os_rsp and regs, regs is above os_rsp.
+regs addr : 0x20863A8, os_rsp addr: 0x2093000
+
+Part 3
+------
+
+Q1. Why testcase#2 should show the output 'Error...exiting'
+Ans1) This is because the return address to user space being passed is pointer to a variable allocated on stack. Whereas we want an address that is within the codespace.
+
+Part 4
+------
+Q1. What all registers are changed in do_div_by_zero and why?
+Ans1) entry_rip, entry_rsp and rbp. This is because, we reset our instruction pointer to the next instruction of function1 after calling function2. We also need to reset the stack pointer and the base pointer to the saved address of rbp (returning to the previous config of stack).
+
+Q2. In testcase #4 and #5, how many times the 'fact' function would return one? 
+Ans2) In testcase 4, 3 times(fact: 1,3,5).
+      In testcase 5, 5 times(fact: 1,3,5,7,9).
+
