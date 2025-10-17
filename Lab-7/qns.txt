@@ -1,0 +1,19 @@
+Part 1
+------
+Q1. Briefly explain your implementation logic to handle wrap-around in the trace buffer.
+Ans1) We take mode of offset with 4096 before performing any action on it.
+
+Q2. Can a write to trace buffer return 0 even if we pass non-zero size to the system call? Why or Why not?
+Ans2) Yes, if number of bytes free to write is 0
+
+Q3. Explain the expected behavior of testcase9.c.  
+Ans3) Since MAX_OPEN_FILES = 32 and since 0,1,2 are open by default, only 29 trace buffers would be created and hence fd[29] = -1
+
+Part 2
+------
+Q1. In testcase13.c, what address `caddr' represent? How it is formulated in the user space?
+Ans1) caddr refers to the position of stack pointer before calling of function. First when function is called sp moves to sp-8, then in function we allocated var, now sp becomes sp-16 (since var is u64). In the end we return &var+16 which essentially gives back sp.
+
+Q2. How do you explain the invocation of tb_read() and tb_write() when a read/write syscall is performed?
+Ans2) When read/write is called, it checks for the file type, if file type is trace buffer, then it uses the fops, which essentially point to tb_read and tb_write.
+
