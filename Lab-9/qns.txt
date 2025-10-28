@@ -1,0 +1,122 @@
+Part1
+-----
+
+Q1. In testcase1.c, how many times the swapper process got scheduled?
+Ans) 10 times.Verified by printing everytime swapper process is called. Since we call sleep(10) and the timer interrupt must be 1.
+Q2. In testcase3.c, how many times the swapper process is scheduled and why?
+Ans) 7 times. Since there were 3 timer interrupts. After the sleep from process 1 (of 10).
+Verifying by printing :
+Page table setup done, launching init ...
+SL 1 --> 2
+TI 2 --> 3
+TI 3 --> 4
+TI 4 --> 2
+pid 2 sum 80000
+EX 2 --> 3
+pid 3 sum 120000
+EX 3 --> 4
+pid 4 sum 160000
+swapper
+swapper
+swapper
+swapper
+swapper
+swapper
+swapper
+TI 0 --> 1
+pid 1 sum 40000
+
+
+Q3. In testcase5.c, how many times the sum value was less than 10 and why?    
+Ans) The sum value is less than 10 twice. This shows that in GemOS, pid to the child is assigned such that the child gets the first available pid. Process with pid 4 had exited earlier hence when process 8 gets created it gets pid =4
+SL 1 --> 2
+TI 2 --> 3
+TI 3 --> 4
+pid 4 sum 4
+EX 4 --> 5
+TI 5 --> 6SL 1 --> 2
+TI 2 --> 3
+TI 3 --> 4
+pid 4 sum 4
+EX 4 --> 5
+TI 5 --> 6
+TI 6 --> 7
+TI 7 --> 4
+pid 4 sum 4
+EX 4 --> 1
+TI 1 --> 2
+pid 2 sum 80000
+EX 2 --> 3
+pid 3 sum 120000
+EX 3 --> 5
+pid 5 sum 200000
+EX 5 --> 6
+pid 6 sum 240000
+EX 6 --> 7
+pid 7 sum 280000
+EX 7 --> 1
+pid 1 sum 40000
+
+TI 6 --> 7
+TI 7 --> 4
+pid 4 sum 4
+EX 4 --> 1
+TI 1 --> 2
+pid 2 sum 80000
+EX 2 --> 3
+pid 3 sum 120000
+EX 3 --> 5
+pid 5 sum 200000
+EX 5 --> 6
+pid 6 sum 240000
+EX 6 --> 7
+pid 7 sum 280000
+EX 7 --> 1
+pid 1 sum 40000
+
+This is because 
+
+Part 2
+------
+
+Q1. In testcase1.c, in which level the page table entries for the two addresses
+for which walk_pt is called diverse and why?
+Ans1) They diverse in the 2nd level because their offset differ for the third level.
+Their offset differs because their virtual address differ by atleast 1GB (as one address is of code segment and other is of stack segment).
+Q2. In testcase2.c, reason about the page table entries at different levels for 
+(ptr+4096) across different invocation of walk_pt. Specifically, differentiate
+the entries w.r.t. the entries corresponding to (ptr)
+Ans2) GemOs lazily allocated memory.Unless ptr, or the next page (ptr+4096) is actually written, there is no actuall mapping, hence we see such result.
+Since ptr and ptr+4096 differ only by 1 page when we allocate for ptr, the entry for ptr+4096 gets allocated till L3 level.
+
+Q3. Explain the gemOS physical memory allocation logic for the user stack
+    region by examining the o/p of testcase4.c.
+Ans3) It performs lazy allocation per page. Also to allocate memory at a perticular address, we allocated all pages before it. It can be seen when we have written on ptr-8182 (i.e, the second page) the first page(ptr-4096) also gets allocated.
+Q4. In testcase5.c, the PFN used to maintain L4 page table for the two addresses
+    are same. (True/False) with justification.
+Ans4) False they are different. Since their virtual addresses differ by 2MB. (512*4 KB)
+L1-entry addr: 0x2093000, L1-entry contents: 0x209401B, PFN: 0x2094, Flags: 0x1B
+L2-entry addr: 0x2094030, L2-entry contents: 0x2095019, PFN: 0x2095, Flags: 0x19
+L3-entry addr: 0x2095008, L3-entry contents: 0x209E019, PFN: 0x209E, Flags: 0x19
+L4-entry addr: 0x209E008, L4-entry contents: 0x641A019, PFN: 0x641A, Flags: 0x19
+===================
+L1-entry addr: 0x2093000, L1-entry contents: 0x209401B, PFN: 0x2094, Flags: 0x1B
+L2-entry addr: 0x2094030, L2-entry contents: 0x2095019, PFN: 0x2095, Flags: 0x19
+L3-entry addr: 0x2095028, L3-entry contents: 0x209F019, PFN: 0x209F, Flags: 0x19
+L4-entry addr: 0x209F008, L4-entry contents: 0x641C011, PFN: 0x641C, Flags: 0x11
+
+
+Q5. Which bit is used to maintain the `write' permission for a page? Justify. 
+Ans5) The fourth bit is used to maintain the write permission.
+L1-entry addr: 0x2093000, L1-entry contents: 0x209401B, PFN: 0x2094, Flags: 0x1B
+L2-entry addr: 0x2094020, L2-entry contents: 0x209C01B, PFN: 0x209C, Flags: 0x1B
+L3-entry addr: 0x209C000, L3-entry contents: 0x209D01B, PFN: 0x209D, Flags: 0x1B
+L4-entry addr: 0x209D000, L4-entry contents: 0x6412011, PFN: 0x6412, Flags: 0x11
+===================
+L1-entry addr: 0x2093000, L1-entry contents: 0x209401B, PFN: 0x2094, Flags: 0x1B
+L2-entry addr: 0x20940F8, L2-entry contents: 0x209701B, PFN: 0x2097, Flags: 0x1B
+L3-entry addr: 0x2097FF8, L3-entry contents: 0x209801B, PFN: 0x2098, Flags: 0x1B
+L4-entry addr: 0x2098FF8, L4-entry contents: 0x6411019, PFN: 0x6411, Flags: 0x19
+===================
+
+As seen from the output of testcase 1, the first corresponds to an address of code segment which is read-only. We see 0x11 and 0x19 differ only at the fourth bit, thus justifying the answer.     
