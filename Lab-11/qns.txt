@@ -1,0 +1,29 @@
+Part1
+-----
+
+Q1. When creating a thread, which registers are required to be modified and why?
+Ans1) entry_rsp, entry_rip, rbp, rdi. Entry_rsp and rbp to set the stack, entry_rip to set the instruction pointer of the function the thread will execute. rdi to store the function arguments. 
+
+Q2. When are the stack areas of threads get deallocated? Can the main process access the thread stack variables after they exited?
+An2) When threads exit or when a thread is force exited due to parent exit, the stack areas of threads get deallocated. 
+Q3. In testcase5.c, which process/thread calls exit system call and how do you handle it?    
+Ans3) Parent process calls exit. We handle it by using do_exit call in which we exit all threads.
+
+Part 2
+------
+
+Q1. In testcase1.c, which pthread functionality is implemented and how?
+
+
+Q2. In testcase4.c, the output will be same irrespective of the scheduling order? True/False with justification.
+
+
+Q3. In testcase5.c, the output will be same if we remove the sleep in line #50? True/False with justification.
+
+
+Part 3
+------
+Q1. In testcase1.c, explain the number of expected CoW faults?
+
+
+Q2. Is TLB flush necessary for working of CoW fork? How and When?

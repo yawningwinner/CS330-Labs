@@ -1,0 +1,50 @@
+spawn telnet localhost 3456
+Trying ::1...
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+==== m5 terminal: Terminal 0 ====
+            Starting IITK gemOS ......
+Initial Segment Map: cs = 0x8 ds = 0x10 ss = 0x10
+ESP=0x114108 EBP=0x114168
+cr0=0xE0000011 cr3=0x70000 cr4=0x20
+Initializing memory
+base = 0x0 limit low = 0x0 high=0x0 ac_byte = 0x0 flags=0x0
+base = 0x0 limit low = 0xFFFF high=0xF ac_byte = 0x9A flags=0xA
+base = 0x0 limit low = 0xFFFF high=0xF ac_byte = 0x92 flags=0xE
+base = 0x0 limit low = 0xFFFF high=0xF ac_byte = 0x8B flags=0xA
+Initializing user segments
+Initializing APIC
+APIC Base address = 0xFEE00000
+GemOS# init
+Setting up init process ...
+Page table setup done, launching init ...
+Starting Test
+parent: 0x180202000
+L1-entry addr: 0x2092000, L1-entry contents: 0x209301B, PFN: 0x2093, Flags: 0x1B 
+L2-entry addr: 0x2093030, L2-entry contents: 0x209401B, PFN: 0x2094, Flags: 0x1B 
+L3-entry addr: 0x2094008, L3-entry contents: 0x209D01B, PFN: 0x209D, Flags: 0x1B 
+L4-entry addr: 0x209D010, L4-entry contents: 0x641C011, PFN: 0x641C, Flags: 0x11 
+child: 0x180201000
+L1-entry addr: 0x209E000, L1-entry contents: 0x209F01B, PFN: 0x209F, Flags: 0x1B 
+L2-entry addr: 0x209F030, L2-entry contents: 0x22A201B, PFN: 0x22A2, Flags: 0x1B 
+L3-entry addr: 0x22A2008, L3-entry contents: 0x22AD01B, PFN: 0x22AD, Flags: 0x1B 
+L4-entry addr: 0x22AD008, L4-entry contents: 0x641B011, PFN: 0x641B, Flags: 0x11 
+parent: 0x180202000
+L1-entry addr: 0x2092000, L1-entry contents: 0x209301B, PFN: 0x2093, Flags: 0x1B 
+L2-entry addr: 0x2093030, L2-entry contents: 0x209401B, PFN: 0x2094, Flags: 0x1B 
+L3-entry addr: 0x2094008, L3-entry contents: 0x209D01B, PFN: 0x209D, Flags: 0x1B 
+L4-entry addr: 0x209D010, L4-entry contents: 0x641F019, PFN: 0x641F, Flags: 0x19 
+child: 0x180201000
+L1-entry addr: 0x209E000, L1-entry contents: 0x209F01B, PFN: 0x209F, Flags: 0x1B 
+L2-entry addr: 0x209F030, L2-entry contents: 0x22A201B, PFN: 0x22A2, Flags: 0x1B 
+L3-entry addr: 0x22A2008, L3-entry contents: 0x22AD01B, PFN: 0x22AD, Flags: 0x1B 
+L4-entry addr: 0x22AD008, L4-entry contents: 0x6420019, PFN: 0x6420, Flags: 0x19 
+child: 0x180202000
+L1-entry addr: 0x209E000, L1-entry contents: 0x209F01B, PFN: 0x209F, Flags: 0x1B 
+L2-entry addr: 0x209F030, L2-entry contents: 0x22A201B, PFN: 0x22A2, Flags: 0x1B 
+L3-entry addr: 0x22A2008, L3-entry contents: 0x22AD01B, PFN: 0x22AD, Flags: 0x1B 
+L4-entry addr: 0x22AD010, L4-entry contents: 0x641C011, PFN: 0x641C, Flags: 0x11 
+d b
+GemOS# exit
+Connection closed by foreign host.
